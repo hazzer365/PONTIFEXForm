@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pontifex Financieros - Precalificación</title>
+    <link rel="stylesheet" href="Estilos/styles.css">
+    <script src="Javascript/validacion.js"></script>
+</head>
+<body>
+    <div id="main-container">
+        <!-- Navbar -->
+        <header>
+            <nav class="nav">
+                <img src="Imagenes/logo.png" alt="Pontifex Logo" class="logo">
+                <ul>
+                    <li class="mover-item"><a href="index.html">Inicio</a></li>
+                    <li class="mover-item">
+                        <a href="formulario.html" class="btn-precalificate">
+                            PRECALIFICARME
+                            <img src="Imagenes/imgPrecalificarme.png" alt="Icono">
+                        </a>
+                    </li>
+                    <li class="mover-item">
+                        <a href="https://wa.me/+526621873008" target="_blank" class="btn-whatsapp">
+                            <img src="Imagenes/watsap.png" alt="WhatsApp">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Sección de Precalificación -->
+        <div class="full-width-bg precalificacion-bg">
+            <div class="content-wrapper">
+                <section class="precalificacion-section">
+                    <div class="precalificacion-content">
+                        <div class="text-section">
+                            <h1>Precalificarme</h1>
+                            <p>Completa el formulario y en breve te contactaremos para pontificar tu negocio.</p>
+                        </div>
+                        <div class="form-section">
+                            <div class="form-container">
+                                <form action="#" method="post" class="precalificacion-form" id="precalificacionForm" novalidate>
+                                    <label for="nombre-contacto">Nombre completo del contacto</label>
+                                    <input type="text" id="nombre-contacto" name="nombre_contacto" >
+
+                                    <label for="nombre-empresa">Nombre de la empresa</label>
+                                    <input type="text" id="nombre-empresa" name="nombre_empresa" >
+
+                                    <label for="regimen-fiscal">Régimen fiscal</label>
+                                    <select id="regimen-fiscal" name="regimen_fiscal" >
+                                        <option value="">Selecciona el que corresponda</option>
+                                        <option value="persona_moral">Persona moral</option>
+                                        <option value="persona_fisica">Persona física con actividad empresarial</option>
+                                        <option value="resico">RESICO</option>
+                                        <option value="asalariado">Asalariado</option>
+                                    </select>
+
+                                    <label for="correo">Correo electrónico</label>
+                                    <input type="email" id="correo" name="correo" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+
+                                    <label for="telefono">Teléfono de contacto</label>
+                                    <input type="tel" id="telefono" name="telefono" pattern="[0-9]{10}" minlength="10">
+
+                                    <label for="telefono2">Teléfono de contacto secundario</label>
+                                    <input type="tel" id="telefono2" name="telefono2" pattern="[0-9]{10}" minlength="10">
+
+                                    <p>Estoy interesado en:</p>
+                                    <div class="checkbox-group" id="checkbox-group">
+                                        <label><input type="checkbox" name="interes" value="credito"> Crédito</label>
+                                        <label><input type="checkbox" name="interes" value="arrendamiento"> Arrendamiento</label>
+                                        <label><input type="checkbox" name="interes" value="factoraje"> Factoraje</label>
+                                        <label><input type="checkbox" name="interes" value="seguros"> Seguros y Fianzas</label>
+                                    </div>
+
+                                    <label for="comentarios">¿Quieres contarnos más?</label>
+                                    <textarea id="comentarios" name="comentarios" placeholder="Escribe aquí más sobre tu negocio o cómo te gustaría nuestro apoyo" ></textarea>
+
+                                    <button type="submit" class="submit-button" id="enviarButton">ENVIAR</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer-container">
+            <div class="footer-section productos">
+                <h4>Productos</h4>
+                <ul>
+                    <li>Crédito</li>
+                    <li>Arrendamiento</li>
+                    <li>Factoraje</li>
+                    <li>Seguros</li>
+                    <li>Fianzas</li>
+                </ul>
+            </div>
+
+            <div class="footer-section contacto">
+                <h4>Contáctanos</h4>
+                <p><i class="fas fa-phone-alt"></i> <a href="tel:+526621873008">+52 662 187 3008</a></p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:contacto@pontifex.mx">contacto@pontifex.mx</a></p>
+                <p><i class="fas fa-map-marker-alt"></i> Blvd. Luis Donaldo Colosio, Plaza Andenes Piso 5 #503, Col. Santa Fé</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Enlace al archivo de JavaScript separado -->
+    <script src="Javascript/validacion.js"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+</body>
+</html>
